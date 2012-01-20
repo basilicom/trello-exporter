@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+/**
+ *
+ */
+
+set_time_limit(0);
+
+define('ROOT_PATH', dirname(__DIR__));
+
+require_once ROOT_PATH.'/src/Basilicom/Trello/Exporter.php';
+
+$exporter = new \Basilicom\Trello\Exporter(
+    include(ROOT_PATH.'/app/config/config.php'),
+    ROOT_PATH.'/app/Resources/views',
+    ROOT_PATH.'/var'
+);
+
+$exporter->export();
+

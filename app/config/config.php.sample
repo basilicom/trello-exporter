@@ -1,0 +1,8 @@
+<?php
+
+return (object)array(
+
+    'key'       => '',
+    'token'     => '',
+    'boardId'   => ''
+);
